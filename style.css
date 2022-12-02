@@ -1,0 +1,138 @@
+body{
+    margin: auto;
+    background: rgb(248, 198, 122);
+
+}
+h2 { 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    top: 0px;
+    left: 120px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    
+}
+
+li{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "nav nav content content content content content content content promo promo promo"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    
+}
+.header{
+    background-color: rgb(70, 68, 64);
+    border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+    -moz-border-radius: 1em 4em 1em 4em
+    / 2em 1em 2em 1em;
+    -webkit-border-radius: 1em 4em 1em 4em
+    / 2em 1em 2em 1em;
+    grid-area: header;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav{
+    background-color: black;
+    opacity: 0.5;
+    border: 3px dotted #ddc700;
+    border-radius: 2rem;
+    padding: 10px;
+    grid-area: nav;
+    width: 450px;
+    overflow: auto;
+    color: white;
+}
+
+.content{
+    background-color: rgb(212, 38, 46);
+    opacity: 0.5;
+    border: 3px dotted #ddc700;
+    border-radius: 2rem;
+    padding: 10px;
+    width: 450px;
+    grid-area: content;
+    color: white;   
+}
+
+.promo{
+    background-color: black;
+    opacity: 0.5;
+    border: 3px dotted #ddc700;
+    border-radius: 2rem;
+    padding: 10px;
+    grid-area: promo;
+    width: 450px;
+    color: white;
+}
+
+.footer{
+    background-color: rgb(212, 38, 46);
+    opacity: 0.5;
+    border: 3px dotted #ddc700;
+    border-radius: 3rem;
+    padding: 10px;
+    grid-area: footer;
+    height: fit-content;
+    margin-top: 10px;
+    color: white;
+    overflow: auto;
+}
+
+
+/* Extra small devices (phones, 600px and down */
+@media only screen and (max-width: 600px) {
+    /* ini untuk tampilan handphone */
+    .container{
+        grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+    "content content content content content content content content content content content content "
+    "promo promo promo promo promo promo promo promo promo promo promo promo"
+    "footer footer footer footer footer footer footer footer footer footer footer footer ";
+    grid-template-rows: 100px 200px auto 200px 100px;
+    }    
+}
+
+/* Extra small devices (potrait tablets and large phones, 600px and up */
+@media only screen and (min-width: 600px) {
+    /* ini untuk tampilan tablet */
+    .container{
+        grid-template-areas: 
+        "header header header header header header header header header header header header"
+        "nav nav content content content content content content content content content content"
+        "promo promo promo promo promo promo promo promo promo promo promo promo "
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+        grid-template-rows: 100px auto 200px 100px;
+    }
+}
+
+/* Medium devices (Landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){}
+
+/*Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* ini untuk tampilan laptop */
+    .container{
+        grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "nav nav content content content content content content content promo promo promo"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    
+    }
+}
+
+/*Extrea large devices (Large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
